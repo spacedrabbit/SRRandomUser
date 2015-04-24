@@ -20,7 +20,9 @@
     // Override point for customization after application launch.
     
     SRRandomUserAPIManager *sharedManager = [SRRandomUserAPIManager sharedAPIManager];
-    [sharedManager requestRandomUser];
+    [sharedManager requestRandomUser:^(FSNConnection * connection) {
+        NSLog(@"Connection: %@", connection.parseResult);
+    }];
     
     return YES;
 }

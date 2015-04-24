@@ -12,6 +12,8 @@ target 'SRRandomUserTests' do
 
 pod 'Specta'
 pod 'Expecta'
+pod 'Expecta+OCMock', '~> 2.0'
+pod 'OCMock', '~> 3.1'
 
 end
 

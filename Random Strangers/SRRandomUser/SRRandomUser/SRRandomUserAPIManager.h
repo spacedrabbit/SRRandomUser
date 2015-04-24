@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FSNetworking/FSNConnection.h>
 
 typedef NS_ENUM(NSUInteger, SRRandomUserGender){
     SRRandomUserGenderMale = 0,
@@ -31,9 +32,9 @@ typedef NS_ENUM(NSUInteger, SRRandomUserNationality) {
 
 + (instancetype)sharedAPIManager;
 
-- (void)requestRandomUser;
-- (void)requestRandomUsers:(NSUInteger)numberOfUsers;
-- (void)requestRandomUsers:(NSUInteger)numberOfUsers ofGender:(SRRandomUserGender)gender;
+- (void)requestRandomUser:(FSNCompletionBlock)completion;
+- (void)requestRandomUsers:(NSUInteger)numberOfUsers completion:(FSNCompletionBlock)completion;
+- (void)requestRandomUsers:(NSUInteger)numberOfUsers ofGender:(SRRandomUserGender)gender completion:(FSNCompletionBlock)completion;
 
 - (void)returnResultsAsType:(SRRandomUserResultsFormat)format;
 - (void)changeNationalityTo:(SRRandomUserNationality)nationality;
