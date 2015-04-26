@@ -7,5 +7,6 @@ before_install:
   - brew reinstall xctool
   - gem update cocoapods --no-document --conservative
   - gem install slather --no-document
+  - pod install
 after_success:
   - slather
