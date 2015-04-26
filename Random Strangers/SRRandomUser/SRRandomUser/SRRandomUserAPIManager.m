@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Tur, Louis. All rights reserved.
 //
 
+@import CoreGraphics;
+@import UIKit;
 #import "SRRandomUserAPIManager.h"
 #import <FSNetworking/FSNConnection.h>
 
