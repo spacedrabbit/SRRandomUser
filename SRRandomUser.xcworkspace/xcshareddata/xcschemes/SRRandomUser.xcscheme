@@ -14,6 +14,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0AA26A29EDFCB9247E9467DB"
+               BuildableName = "libPods-SRRandomUser.a"
+               BlueprintName = "Pods-SRRandomUser"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "53E8623A931011868821B608"
                BuildableName = "libPods-SRRandomUserTests-Expecta.a"
                BlueprintName = "Pods-SRRandomUserTests-Expecta"
@@ -45,6 +59,20 @@
                BlueprintIdentifier = "8DF9CAD7D65CD6F86E7C5E1E"
                BuildableName = "libPods-SRRandomUser-FSNetworking.a"
                BlueprintName = "Pods-SRRandomUser-FSNetworking"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "267E8CCC5DD3C794128FA723"
+               BuildableName = "libPods-SRRandomUserTests.a"
+               BlueprintName = "Pods-SRRandomUserTests"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
