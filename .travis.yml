@@ -1,0 +1,11 @@
+language: objective-c
+xcode_sdk: iphonesimulator8.1
+xcode_scheme: SRRandomUser
+xcode_workspace: SRRandomUser.xcworkspace
+before_install:
+  - brew update
+  - brew reinstall xctool
+  - gem update cocoapods --no-document --conservative
+  - gem install  --no-document
+after_success:
+  - slather
