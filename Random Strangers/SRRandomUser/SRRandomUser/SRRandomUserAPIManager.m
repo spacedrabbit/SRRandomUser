@@ -70,18 +70,6 @@ static NSString *SRRandomUserAPIKey = @"";
 
 -(void)requestRandomUsers:(NSUInteger)numberOfUsers ofGender:(SRRandomUserGender)gender completion:(FSNCompletionBlock)completion{
     
-    if (!completion){
-        completion = ^(FSNConnection *connection){
-            
-            if (connection.httpResponse.statusCode == 200) {
-                NSDictionary *jsonResponse = (NSDictionary *)connection.parseResult;
-            }
-            else if (connection.httpResponse.statusCode > 400){
-                NSLog(@"Error in completing request: %@", connection.error);
-            }
-        };
-    }
-    
     FSNConnection * fsnConnection = [FSNConnection withUrl:URLIFY(SRRandomUserURL)
                                                     method:FSNRequestMethodGET
                                                    headers:@{}

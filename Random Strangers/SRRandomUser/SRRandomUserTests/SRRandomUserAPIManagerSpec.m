@@ -16,15 +16,15 @@ SpecBegin(SRRandomUserAPIManager)
 
 describe(@"+[SRRandomUserAPIManager sharedAPIManager]", ^{
     
-//    __block SRRandomUserAPIManager *sharedAPIManager;
-//    beforeAll(^{
-//        sharedAPIManager = [SRRandomUserAPIManager sharedAPIManager];
-//    });
-//    
-//    it(@"Should return instancetype and not nil", ^{
-//        expect(sharedAPIManager).toNot.beNil;
-//        expect(sharedAPIManager).to.beMemberOf([SRRandomUserAPIManager class]);
-//    });  
+    __block SRRandomUserAPIManager *sharedAPIManager;
+    beforeAll(^{
+        sharedAPIManager = [SRRandomUserAPIManager sharedAPIManager];
+    });
+    
+    it(@"Should return instancetype and not nil", ^{
+        expect(sharedAPIManager).toNot.beNil;
+        expect(sharedAPIManager).to.beMemberOf([SRRandomUserAPIManager class]);
+    });  
     
 });
 
