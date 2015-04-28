@@ -8,6 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString * const SREmailKey;
+extern NSString * const SRUsernameKey;
+extern NSString * const SRPasswordKey;
+extern NSString * const SRRegistrationDateKey;
+extern NSString * const SRDOBKey;
+extern NSString * const SRPhoneKey;
+extern NSString * const SRCellKey;
+extern NSString * const SRNationalityKey;
+extern NSString * const SRGenderKey;
+
 @interface SRRandomUser : NSObject
 
 // Basic details

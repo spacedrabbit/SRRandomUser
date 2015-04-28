@@ -52,8 +52,8 @@
     [[SRRandomUserAPIManager sharedAPIManager] requestRandomUser:^(FSNConnection * connection) {
         
         if (connection.httpResponse.statusCode == 200) {
-            NSDictionary *jsonResponse = (NSDictionary *)connection.parseResult;
-            SRRandomUserPool *resultsPool = [SRRandomUserPool randomUserPoolForData:jsonResponse];
+            NSArray *response = (NSArray *)connection.parseResult;
+            SRRandomUserPool *resultsPool = [SRRandomUserPool randomUserPoolForData:response];
             
             completion(resultsPool, YES);
         }

@@ -10,6 +10,6 @@
 
 @interface SRRandomUserPool : NSObject
 
-+(instancetype)randomUserPoolForData:(NSDictionary *)userData;
++(instancetype)randomUserPoolForData:(NSArray *)userData;
 
 @end

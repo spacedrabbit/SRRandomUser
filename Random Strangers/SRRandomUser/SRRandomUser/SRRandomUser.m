@@ -9,7 +9,7 @@
 #import "SRRandomUser.h"
 @import CoreGraphics;
 
-static NSString * const SRGenderKey = @"gender";
+// private
 static NSString * const SRTitleKey = @"title";
 static NSString * const SRFirstNameKey = @"first";
 static NSString * const SRLastNameKey = @"last";
@@ -17,17 +17,22 @@ static NSString * const SRStreetKey = @"street";
 static NSString * const SRCityKey = @"city";
 static NSString * const SRStateKey = @"state";
 static NSString * const SRZipKey = @"zip";
-static NSString * const SREmailKey = @"email";
-static NSString * const SRUsernameKey = @"username";
-static NSString * const SRPasswordKey = @"password";
-static NSString * const SRRegistrationDateKey = @"registered";
-static NSString * const SRDOBKey = @"dob";
-static NSString * const SRPhoneKey = @"phone";
-static NSString * const SRCellKey = @"cell";
+
 static NSString * const SRImageLargeKey = @"large";
 static NSString * const SRImageMediumKey = @"medium";
 static NSString * const SRImageThumbKey = @"thumbnail";
-static NSString * const SRNationalityKey = @"nationality";
+
+// extern
+NSString * const SREmailKey = @"email";
+NSString * const SRUsernameKey = @"username";
+NSString * const SRPasswordKey = @"password";
+NSString * const SRRegistrationDateKey = @"registered";
+NSString * const SRDOBKey = @"dob";
+NSString * const SRPhoneKey = @"phone";
+NSString * const SRCellKey = @"cell";
+NSString * const SRNationalityKey = @"nationality";
+NSString * const SRGenderKey = @"gender";
+
 
 @interface SRRandomUser ()
 
