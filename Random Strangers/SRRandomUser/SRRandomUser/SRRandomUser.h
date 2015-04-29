@@ -17,6 +17,7 @@ extern NSString * const SRPhoneKey;
 extern NSString * const SRCellKey;
 extern NSString * const SRNationalityKey;
 extern NSString * const SRGenderKey;
+extern NSString * const SRSSNKey;
 
 @interface SRRandomUser : NSObject
 

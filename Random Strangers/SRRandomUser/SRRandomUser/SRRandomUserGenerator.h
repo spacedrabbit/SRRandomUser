@@ -17,10 +17,10 @@ typedef void(^SRRandomUserCompletionBlock)(SRRandomUserPool *, BOOL success);
 
 + (instancetype)sharedRandomUserManager;
 
-+ (void)randomUserRequestWithCompletion:(SRRandomUserCompletionBlock)completion;
-+ (void)randomUsersRequest:(NSUInteger)quantity completion:(SRRandomUserCompletionBlock)completion;
-+ (void)randomUsersRequest:(NSUInteger)quantity withGender:(SRRandomUserGender)gender completion:(SRRandomUserCompletionBlock)completion;
-+ (void)randomUsersRequest:(NSUInteger)quantity withGender:(SRRandomUserGender)gender andNationality:(SRRandomUserNationality)nationality completion:(SRRandomUserCompletionBlock)completion;
+- (void)randomUserRequestWithCompletion:(SRRandomUserCompletionBlock)completion;
+- (void)randomUsersRequest:(NSUInteger)quantity completion:(SRRandomUserCompletionBlock)completion;
+- (void)randomUsersRequest:(NSUInteger)quantity withGender:(SRRandomUserGender)gender completion:(SRRandomUserCompletionBlock)completion;
+- (void)randomUsersRequest:(NSUInteger)quantity withGender:(SRRandomUserGender)gender andNationality:(SRRandomUserNationality)nationality completion:(SRRandomUserCompletionBlock)completion;
 
 
 @end

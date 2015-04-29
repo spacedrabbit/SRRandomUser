@@ -31,15 +31,15 @@ static NSString *SRRandomUserAPIKey = @"";
 
 @implementation SRRandomUserAPIManager
 
-+(instancetype)sharedAPIManager{
-    
-    __block SRRandomUserAPIManager *sharedManager;
-    dispatch_once_t onceToken;
++ (instancetype)sharedAPIManager {
+    static SRRandomUserAPIManager *_sharedManager = nil;
+    static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedManager = [[SRRandomUserAPIManager alloc] init];
+        _sharedManager = [[SRRandomUserAPIManager alloc] init];
     });
-    return sharedManager;
+    return _sharedManager;
 }
+
 
 - (FSNParseBlock)defaultParseBlock {
     

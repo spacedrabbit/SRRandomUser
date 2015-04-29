@@ -10,6 +10,11 @@
 
 @interface SRRandomUserPool : NSObject
 
-+(instancetype)randomUserPoolForData:(NSArray *)userData;
+/** Returns an @p SRRandomUserPool which contains an array of SRRandomUsers along with API Version and Seed value
+ *
+ *  @param userData @p NSDictionary obtained from querying the API
+ *  @return @p SRRandomUserPool filled with SRRandomUsers
+ */
++(instancetype)randomUserPoolForData:(NSDictionary *)userData;
 
 @end

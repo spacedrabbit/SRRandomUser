@@ -35,6 +35,7 @@ typedef NS_ENUM(NSUInteger, SRRandomUserNationality) {
 - (void)requestRandomUser:(FSNCompletionBlock)completion;
 - (void)requestRandomUsers:(NSUInteger)numberOfUsers completion:(FSNCompletionBlock)completion;
 - (void)requestRandomUsers:(NSUInteger)numberOfUsers ofGender:(SRRandomUserGender)gender completion:(FSNCompletionBlock)completion;
+- (void)requestRandomUsers:(NSUInteger)numberOfUsers ofGender:(SRRandomUserGender)gender andNationality:(SRRandomUserNationality)nationality completion:(FSNCompletionBlock)completion
 
 - (void)returnResultsAsType:(SRRandomUserResultsFormat)format;
 - (void)changeNationalityTo:(SRRandomUserNationality)nationality;

@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "SRRandomUserAPIManager.h"
+#import "SRRandomUserGenerator.h"
 
 @interface AppDelegate ()
 
@@ -19,9 +19,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    SRRandomUserAPIManager *sharedManager = [SRRandomUserAPIManager sharedAPIManager];
-    [sharedManager requestRandomUser:^(FSNConnection * connection) {
-        NSLog(@"Connection: %@", connection.parseResult);
+    [[SRRandomUserGenerator sharedRandomUserManager] randomUserRequestWithCompletion:^(SRRandomUserPool *pool, BOOL success) {
+        
+        if (success) {
+            
+            NSLog(@"Got pool, will travel");
+        }
+        
     }];
     
     return YES;

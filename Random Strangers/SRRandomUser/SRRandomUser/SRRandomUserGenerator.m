@@ -28,31 +28,67 @@
 
 + (instancetype)sharedRandomUserManager{
     
-    __block SRRandomUserGenerator *sharedManager;
-    dispatch_once_t onceToken;
+    static SRRandomUserGenerator *_sharedManager;
+    static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedManager = [[SRRandomUserGenerator alloc] init];
+        _sharedManager = [[SRRandomUserGenerator alloc] init];
     });
-    return sharedManager;
+    return _sharedManager;
 }
 
 -(instancetype)init{
     self = [super init];
     if (self) {
-        _sharedRandomUserManager = [[SRRandomUserGenerator alloc] init];
-        _sharedAPIManager = [SRRandomUserAPIManager sharedAPIManager];
         _defaultResultsFormat = SRRandomUserResultsFormatJSON;
         _makeLegoRequests = YES;
     }
     return self;
 }
 
-+(void)randomUserRequestWithCompletion:(SRRandomUserCompletionBlock)completion{
+- (void)randomUserRequestWithCompletion:(SRRandomUserCompletionBlock)completion{
     
-    [[SRRandomUserAPIManager sharedAPIManager] requestRandomUser:^(FSNConnection * connection) {
+    [[SRRandomUserAPIManager sharedAPIManager] requestRandomUsers:1
+                                                         ofGender:SRRandomUserGenderAny
+                                                   andNationality:SRRandomUserNationalityAll
+                                                       completion:^(FSNConnection *connection)
+    {
         
+    }];
+}
+
+- (void)randomUsersRequest:(NSUInteger)quantity completion:(SRRandomUserCompletionBlock)completion{
+    
+    [[SRRandomUserAPIManager sharedAPIManager] requestRandomUsers:quantity
+                                                         ofGender:SRRandomUserGenderAny
+                                                   andNationality:SRRandomUserNationalityAll
+                                                       completion:^(FSNConnection *connection)
+    {
+        
+    }];
+    
+}
+
+- (void)randomUsersRequest:(NSUInteger)quantity withGender:(SRRandomUserGender)gender completion:(SRRandomUserCompletionBlock)completion{
+    
+    [[SRRandomUserAPIManager sharedAPIManager] requestRandomUsers:quantity
+                                                         ofGender:gender
+                                                   andNationality:SRRandomUserNationalityAll
+                                                       completion:^(FSNConnection *connection)
+    {
+        
+    }];
+}
+
+- (void)randomUsersRequest:(NSUInteger)quantity withGender:(SRRandomUserGender)gender andNationality:(SRRandomUserNationality)nationality completion:(SRRandomUserCompletionBlock)completion{
+    
+    [[SRRandomUserAPIManager sharedAPIManager] requestRandomUsers:quantity
+                                                         ofGender:gender
+                                                   andNationality:nationality
+                                                       completion:^(FSNConnection *connection)
+    {
+
         if (connection.httpResponse.statusCode == 200) {
-            NSArray *response = (NSArray *)connection.parseResult;
+            NSDictionary *response = (NSDictionary *)connection.parseResult;
             SRRandomUserPool *resultsPool = [SRRandomUserPool randomUserPoolForData:response];
             
             completion(resultsPool, YES);
@@ -63,19 +99,6 @@
         }
         
     }];
-}
-
-+(void)randomUsersRequest:(NSUInteger)quantity completion:(SRRandomUserCompletionBlock)completion{
-    
-    
-}
-
-+(void)randomUsersRequest:(NSUInteger)quantity withGender:(SRRandomUserGender)gender completion:(SRRandomUserCompletionBlock)completion{
-    
-    
-}
-
-+(void)randomUsersRequest:(NSUInteger)quantity withGender:(SRRandomUserGender)gender andNationality:(SRRandomUserNationality)nationality completion:(SRRandomUserCompletionBlock)completion{
     
 }
 

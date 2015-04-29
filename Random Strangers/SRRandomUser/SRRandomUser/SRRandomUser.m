@@ -32,13 +32,13 @@ NSString * const SRPhoneKey = @"phone";
 NSString * const SRCellKey = @"cell";
 NSString * const SRNationalityKey = @"nationality";
 NSString * const SRGenderKey = @"gender";
+NSString * const SRSSNKey = @"SSN";
 
 
 @interface SRRandomUser ()
 
 @property (strong, nonatomic) NSDictionary *fullName;
 @property (strong, nonatomic) NSDictionary *address;
-@property (strong, nonatomic) NSString *email;
 @property (strong, nonatomic) NSDictionary *accountDetails;
 @property (strong, nonatomic) NSDictionary *images;
 
@@ -65,10 +65,10 @@ NSString * const SRGenderKey = @"gender";
 {
     self = [super init];
     if (self) {
-        _fullName = fullName;
-        _address = address;
-        _accountDetails = accountDetails;
-        _images = images;
+        self.fullName = fullName;
+        self.address = address;
+        self.accountDetails = accountDetails;
+        self.images = images;
     }
     return self;
 }
@@ -83,12 +83,16 @@ NSString * const SRGenderKey = @"gender";
 
 // Setters
 - (void)setFullName:(NSDictionary *)fullName{
+    _fullName = fullName;
+    
     _firstName = fullName[SRFirstNameKey];
     _lastName = fullName[SRLastNameKey];
     _title = fullName[SRLastNameKey];
 }
 
 -(void)setAddress:(NSDictionary *)address{
+    _address = address;
+    
     _streetAddress = address[SRStreetKey];
     _city = address[SRCityKey];
     _state = address[SRStateKey];
@@ -96,6 +100,8 @@ NSString * const SRGenderKey = @"gender";
 }
 
 -(void)setAccountDetails:(NSDictionary *)accountDetails{
+    _accountDetails = accountDetails;
+    
     _emailAddress = accountDetails[SREmailKey];
     _username = accountDetails[SRUsernameKey];
     _password = accountDetails[SRPasswordKey];
@@ -114,6 +120,8 @@ NSString * const SRGenderKey = @"gender";
 }
 
 -(void)setImages:(NSDictionary *)images{
+    _images = images;
+    
     _largeProfileImage = [NSURL URLWithString:images[SRImageLargeKey]];
     _mediumProfileImage = [NSURL URLWithString:images[SRImageMediumKey]];
     _thumbnailProfileImage = [NSURL URLWithString:images[SRImageThumbKey]];
