@@ -1,16 +1,24 @@
 PODS:
   - Expecta (0.4.2)
+  - Expecta+OCMock (2.0.0):
+    - Expecta
+    - OCMock
   - FSNetworking (0.0.1)
+  - OCMock (3.1.2)
   - Specta (0.5.0)
 
 DEPENDENCIES:
   - Expecta
+  - Expecta+OCMock (~> 2.0)
   - FSNetworking
+  - OCMock (~> 3.1)
   - Specta
 
 SPEC CHECKSUMS:
   Expecta: 78b4e8b0c8291fa4524d7f74016b6065c2e391ec
+  Expecta+OCMock: f6e1758896d571d1e591ab569507309750804ca1
   FSNetworking: 596048151bffc5917b2bcfa3a840624f49e309fa
+  OCMock: a10ea9f0a6e921651f96f78b6faee95ebc813b92
   Specta: eb90708ed77569bbda089f8ead10bb99b8e9489e
 
 COCOAPODS: 0.36.4

@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		144FECB71AE9FE2100F0D0AC /* singleRandomUserTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 144FECB61AE9FE2100F0D0AC /* singleRandomUserTest.json */; };
+		146BD8191AEF46D300839D97 /* SRRandomUserPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 146BD8181AEF46D300839D97 /* SRRandomUserPool.m */; };
+		146BD81C1AEF4E9A00839D97 /* SRRandomUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 146BD81B1AEF4E9A00839D97 /* SRRandomUser.m */; };
 		25AD7CF51AE943AF005BEAC3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AD7CF41AE943AF005BEAC3 /* main.m */; };
 		25AD7CF81AE943AF005BEAC3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AD7CF71AE943AF005BEAC3 /* AppDelegate.m */; };
 		25AD7D001AE943AF005BEAC3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25AD7CFF1AE943AF005BEAC3 /* Images.xcassets */; };
 		25AD7D031AE943AF005BEAC3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25AD7D011AE943AF005BEAC3 /* LaunchScreen.xib */; };
 		25E365741AE9493F00C3FA8E /* SRRandomUserAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E365731AE9493F00C3FA8E /* SRRandomUserAPIManager.m */; };
 		25E365771AE9496A00C3FA8E /* SRRandomUserAPIManagerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E365761AE9496A00C3FA8E /* SRRandomUserAPIManagerSpec.m */; };
-		25E3657A1AE9BD4C00C3FA8E /* SRRandomUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E365791AE9BD4C00C3FA8E /* SRRandomUser.m */; };
+		25E3657A1AE9BD4C00C3FA8E /* SRRandomUserGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E365791AE9BD4C00C3FA8E /* SRRandomUserGenerator.m */; };
 		25E3657D1AE9C3F300C3FA8E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E3657C1AE9C3F300C3FA8E /* CoreGraphics.framework */; };
 		25E3657F1AE9C4D900C3FA8E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E3657E1AE9C4D900C3FA8E /* UIKit.framework */; };
 		A733EADE13F5D30DF73BBEFB /* libPods-SRRandomUserTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 217C8090F700D687B5DABF54 /* libPods-SRRandomUserTests.a */; };
@@ -31,6 +34,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		144FECB61AE9FE2100F0D0AC /* singleRandomUserTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = singleRandomUserTest.json; sourceTree = "<group>"; };
+		146BD8171AEF46D300839D97 /* SRRandomUserPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRRandomUserPool.h; sourceTree = "<group>"; };
+		146BD8181AEF46D300839D97 /* SRRandomUserPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRandomUserPool.m; sourceTree = "<group>"; };
+		146BD81A1AEF4E9A00839D97 /* SRRandomUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRRandomUser.h; sourceTree = "<group>"; };
+		146BD81B1AEF4E9A00839D97 /* SRRandomUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRandomUser.m; sourceTree = "<group>"; };
 		217C8090F700D687B5DABF54 /* libPods-SRRandomUserTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SRRandomUserTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25AD7CEF1AE943AF005BEAC3 /* SRRandomUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SRRandomUser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25AD7CF31AE943AF005BEAC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,8 +52,8 @@
 		25E365721AE9493F00C3FA8E /* SRRandomUserAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRRandomUserAPIManager.h; sourceTree = "<group>"; };
 		25E365731AE9493F00C3FA8E /* SRRandomUserAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRandomUserAPIManager.m; sourceTree = "<group>"; };
 		25E365761AE9496A00C3FA8E /* SRRandomUserAPIManagerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRRandomUserAPIManagerSpec.m; path = SRRandomUserTests/SRRandomUserAPIManagerSpec.m; sourceTree = SOURCE_ROOT; };
-		25E365781AE9BD4C00C3FA8E /* SRRandomUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRRandomUser.h; sourceTree = "<group>"; };
-		25E365791AE9BD4C00C3FA8E /* SRRandomUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRandomUser.m; sourceTree = "<group>"; };
+		25E365781AE9BD4C00C3FA8E /* SRRandomUserGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRRandomUserGenerator.h; sourceTree = "<group>"; };
+		25E365791AE9BD4C00C3FA8E /* SRRandomUserGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRandomUserGenerator.m; sourceTree = "<group>"; };
 		25E3657C1AE9C3F300C3FA8E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		25E3657E1AE9C4D900C3FA8E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		28694EDF77680E41B085DF47 /* Pods-SRRandomUserTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SRRandomUserTests.debug.xcconfig"; path = "../../Pods/Target Support Files/Pods-SRRandomUserTests/Pods-SRRandomUserTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +130,7 @@
 		25AD7D0B1AE943AF005BEAC3 /* SRRandomUserTests */ = {
 			isa = PBXGroup;
 			children = (
+				144FECB61AE9FE2100F0D0AC /* singleRandomUserTest.json */,
 				25E365761AE9496A00C3FA8E /* SRRandomUserAPIManagerSpec.m */,
 				25AD7D0C1AE943AF005BEAC3 /* Supporting Files */,
 			);
@@ -157,8 +166,12 @@
 		25E3657B1AE9BD5100C3FA8E /* Random User */ = {
 			isa = PBXGroup;
 			children = (
-				25E365781AE9BD4C00C3FA8E /* SRRandomUser.h */,
-				25E365791AE9BD4C00C3FA8E /* SRRandomUser.m */,
+				25E365781AE9BD4C00C3FA8E /* SRRandomUserGenerator.h */,
+				25E365791AE9BD4C00C3FA8E /* SRRandomUserGenerator.m */,
+				146BD8171AEF46D300839D97 /* SRRandomUserPool.h */,
+				146BD8181AEF46D300839D97 /* SRRandomUserPool.m */,
+				146BD81A1AEF4E9A00839D97 /* SRRandomUser.h */,
+				146BD81B1AEF4E9A00839D97 /* SRRandomUser.m */,
 			);
 			name = "Random User";
 			sourceTree = "<group>";
@@ -279,6 +292,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				144FECB71AE9FE2100F0D0AC /* singleRandomUserTest.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,9 +366,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				146BD81C1AEF4E9A00839D97 /* SRRandomUser.m in Sources */,
+				146BD8191AEF46D300839D97 /* SRRandomUserPool.m in Sources */,
 				25E365741AE9493F00C3FA8E /* SRRandomUserAPIManager.m in Sources */,
 				25AD7CF81AE943AF005BEAC3 /* AppDelegate.m in Sources */,
-				25E3657A1AE9BD4C00C3FA8E /* SRRandomUser.m in Sources */,
+				25E3657A1AE9BD4C00C3FA8E /* SRRandomUserGenerator.m in Sources */,
 				25AD7CF51AE943AF005BEAC3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

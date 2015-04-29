@@ -1,0 +1,40 @@
+{
+    results =     (
+                {
+            seed = 96ea7403a71ad026;
+            user =             {
+                SSN = "841-75-7173";
+                cell = "(325)-600-1878";
+                dob = 240456412;
+                email = "arianna.graves82@example.com";
+                gender = female;
+                location =                 {
+                    city = modesto;
+                    state = hawaii;
+                    street = "1460 dane st";
+                    zip = 63428;
+                };
+                md5 = 0c309cc7404850b0b5ee49585a164625;
+                name =                 {
+                    first = arianna;
+                    last = graves;
+                    title = mrs;
+                };
+                nationality = US;
+                password = manolo;
+                phone = "(836)-350-9191";
+                picture =                 {
+                    large = "http://api.randomuser.me/portraits/women/86.jpg";
+                    medium = "http://api.randomuser.me/portraits/med/women/86.jpg";
+                    thumbnail = "http://api.randomuser.me/portraits/thumb/women/86.jpg";
+                };
+                registered = 919541289;
+                salt = cKzgIBna;
+                sha1 = 6e94461daaf1e03e9dbe9a2609ce2239ade2688f;
+                sha256 = f2e7f546acb930dfa1bd494ea8546b85f4c3c43c2d7d61e6b61a04614f38dff7;
+                username = organicrabbit595;
+                version = "0.5";
+            };
+        }
+    );
+}
