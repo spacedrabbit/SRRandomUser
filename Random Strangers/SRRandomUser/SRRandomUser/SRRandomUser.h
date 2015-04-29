@@ -26,7 +26,10 @@ extern NSString * const SRSSNKey;
 @property (strong, nonatomic, readonly) NSString *lastName;
 @property (strong, nonatomic, readonly) NSString *title;
 
--(NSString *)formattedName;
+/** Returns @p SRRandomUser's formatted name
+ *  @return @p NSString Formatted string as [Title] [Firstname] [Lastname]
+ */
+- (NSString *)formattedName;
 
 // Address information
 @property (strong, nonatomic, readonly) NSString *streetAddress;
@@ -34,7 +37,10 @@ extern NSString * const SRSSNKey;
 @property (strong, nonatomic, readonly) NSString *state;
 @property (strong, nonatomic, readonly) NSString *zipCode;
 
--(NSString *)formattedAddress;
+/** Returns @p SRRandomUser's formatted address
+ *  @return @p NSString Formatted string as [Street]\n[City], [State] [Zip]
+ */
+- (NSString *)formattedAddress;
 
 // Account details
 @property (strong, nonatomic, readonly) NSString *username;

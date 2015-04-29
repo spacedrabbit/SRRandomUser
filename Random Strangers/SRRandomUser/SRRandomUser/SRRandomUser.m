@@ -9,7 +9,8 @@
 #import "SRRandomUser.h"
 @import CoreGraphics;
 
-// private
+#pragma mark - private consts
+
 static NSString * const SRTitleKey = @"title";
 static NSString * const SRFirstNameKey = @"first";
 static NSString * const SRLastNameKey = @"last";
@@ -22,7 +23,8 @@ static NSString * const SRImageLargeKey = @"large";
 static NSString * const SRImageMediumKey = @"medium";
 static NSString * const SRImageThumbKey = @"thumbnail";
 
-// extern
+#pragma mark - external consts -
+
 NSString * const SREmailKey = @"email";
 NSString * const SRUsernameKey = @"username";
 NSString * const SRPasswordKey = @"password";
@@ -46,7 +48,9 @@ NSString * const SRSSNKey = @"SSN";
 
 @implementation SRRandomUser
 
-+(instancetype)randomUserWithName:(NSDictionary *)fullName
+#pragma mark - Initializers
+
++ (instancetype)randomUserWithName:(NSDictionary *)fullName
                           address:(NSDictionary *)address
                           account:(NSDictionary *)accountDetails
                     profileImages:(NSDictionary *)images
@@ -58,7 +62,7 @@ NSString * const SRSSNKey = @"SSN";
     return user;
 }
 
--(instancetype)initWithName:(NSDictionary *)fullName
+- (instancetype)initWithName:(NSDictionary *)fullName
                     address:(NSDictionary *)address
                     account:(NSDictionary *)accountDetails
               profileImages:(NSDictionary *)images
@@ -73,16 +77,19 @@ NSString * const SRSSNKey = @"SSN";
     return self;
 }
 
--(NSString *)formattedName{
+#pragma mark - Formatting Convinience Methods
+
+- (NSString *)formattedName {
     return [NSString stringWithFormat:@"%@ %@ %@", self.title, self.firstName, self.lastName];
 }
 
--(NSString *)formattedAddress{
+- (NSString *)formattedAddress {
     return [NSString stringWithFormat:@"%@\n%@, %@ %@", self.streetAddress, self.city, self.state, self.zipCode];
 }
 
-// Setters
-- (void)setFullName:(NSDictionary *)fullName{
+#pragma mark - Property Setters
+
+- (void)setFullName:(NSDictionary *)fullName {
     _fullName = fullName;
     
     _firstName = fullName[SRFirstNameKey];
@@ -90,7 +97,7 @@ NSString * const SRSSNKey = @"SSN";
     _title = fullName[SRLastNameKey];
 }
 
--(void)setAddress:(NSDictionary *)address{
+- (void)setAddress:(NSDictionary *)address {
     _address = address;
     
     _streetAddress = address[SRStreetKey];
@@ -99,7 +106,7 @@ NSString * const SRSSNKey = @"SSN";
     _zipCode = address[SRZipKey];
 }
 
--(void)setAccountDetails:(NSDictionary *)accountDetails{
+- (void)setAccountDetails:(NSDictionary *)accountDetails {
     _accountDetails = accountDetails;
     
     _emailAddress = accountDetails[SREmailKey];
@@ -119,7 +126,7 @@ NSString * const SRSSNKey = @"SSN";
     _dateOfRegistration = [NSDate dateWithTimeIntervalSince1970:timeInterval];
 }
 
--(void)setImages:(NSDictionary *)images{
+- (void)setImages:(NSDictionary *)images {
     _images = images;
     
     _largeProfileImage = [NSURL URLWithString:images[SRImageLargeKey]];

@@ -19,13 +19,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [[SRRandomUserGenerator sharedRandomUserManager] randomUserRequestWithCompletion:^(SRRandomUserPool *pool, BOOL success) {
-        
-        if (success) {
-            
-            NSLog(@"Got pool, will travel");
+    [[SRRandomUserGenerator sharedRandomUserManager] randomUsersRequest:2 withGender:SRRandomUserGenderFemale andNationality:SRRandomUserNationalityAll completion:^(SRRandomUserPool *pool, BOOL success) {
+        if (success){
+            NSLog(@"Have pool will travel");
         }
-        
     }];
     
     return YES;
