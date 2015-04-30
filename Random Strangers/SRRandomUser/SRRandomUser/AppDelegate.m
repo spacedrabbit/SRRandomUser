@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "SRRandomUserGenerator.h"
+#import "SRRandomUserFileManager.h"
 
 @interface AppDelegate ()
 
@@ -24,6 +25,8 @@
             NSLog(@"Have pool will travel");
         }
     }];
+    
+    SRRandomUserFileManager *fileManager = [SRRandomUserFileManager sharedFileManager];
     
     return YES;
 }

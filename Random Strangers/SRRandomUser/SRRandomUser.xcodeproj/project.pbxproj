@@ -10,6 +10,7 @@
 		144FECB71AE9FE2100F0D0AC /* singleRandomUserTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 144FECB61AE9FE2100F0D0AC /* singleRandomUserTest.json */; };
 		146BD8191AEF46D300839D97 /* SRRandomUserPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 146BD8181AEF46D300839D97 /* SRRandomUserPool.m */; };
 		146BD81C1AEF4E9A00839D97 /* SRRandomUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 146BD81B1AEF4E9A00839D97 /* SRRandomUser.m */; };
+		148E9DF11AF1BDE8008EB0A3 /* SRRandomUserFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 148E9DF01AF1BDE8008EB0A3 /* SRRandomUserFileManager.m */; };
 		25AD7CF51AE943AF005BEAC3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AD7CF41AE943AF005BEAC3 /* main.m */; };
 		25AD7CF81AE943AF005BEAC3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AD7CF71AE943AF005BEAC3 /* AppDelegate.m */; };
 		25AD7D001AE943AF005BEAC3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25AD7CFF1AE943AF005BEAC3 /* Images.xcassets */; };
@@ -39,6 +40,8 @@
 		146BD8181AEF46D300839D97 /* SRRandomUserPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRandomUserPool.m; sourceTree = "<group>"; };
 		146BD81A1AEF4E9A00839D97 /* SRRandomUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRRandomUser.h; sourceTree = "<group>"; };
 		146BD81B1AEF4E9A00839D97 /* SRRandomUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRandomUser.m; sourceTree = "<group>"; };
+		148E9DEF1AF1BDE8008EB0A3 /* SRRandomUserFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRRandomUserFileManager.h; sourceTree = "<group>"; };
+		148E9DF01AF1BDE8008EB0A3 /* SRRandomUserFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRandomUserFileManager.m; sourceTree = "<group>"; };
 		217C8090F700D687B5DABF54 /* libPods-SRRandomUserTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SRRandomUserTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25AD7CEF1AE943AF005BEAC3 /* SRRandomUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SRRandomUser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25AD7CF31AE943AF005BEAC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		148E9DF21AF1BDEE008EB0A3 /* File Management */ = {
+			isa = PBXGroup;
+			children = (
+				148E9DEF1AF1BDE8008EB0A3 /* SRRandomUserFileManager.h */,
+				148E9DF01AF1BDE8008EB0A3 /* SRRandomUserFileManager.m */,
+			);
+			name = "File Management";
+			sourceTree = "<group>";
+		};
 		25AD7CE61AE943AF005BEAC3 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +120,7 @@
 		25AD7CF11AE943AF005BEAC3 /* SRRandomUser */ = {
 			isa = PBXGroup;
 			children = (
+				148E9DF21AF1BDEE008EB0A3 /* File Management */,
 				25E365711AE9490200C3FA8E /* App Delegate */,
 				25AD7CF21AE943AF005BEAC3 /* Supporting Files */,
 				25E365751AE9494A00C3FA8E /* API Manager */,
@@ -367,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				146BD81C1AEF4E9A00839D97 /* SRRandomUser.m in Sources */,
+				148E9DF11AF1BDE8008EB0A3 /* SRRandomUserFileManager.m in Sources */,
 				146BD8191AEF46D300839D97 /* SRRandomUserPool.m in Sources */,
 				25E365741AE9493F00C3FA8E /* SRRandomUserAPIManager.m in Sources */,
 				25AD7CF81AE943AF005BEAC3 /* AppDelegate.m in Sources */,

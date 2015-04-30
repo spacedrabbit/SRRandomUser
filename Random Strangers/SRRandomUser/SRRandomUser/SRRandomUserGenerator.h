@@ -12,8 +12,18 @@
 @class SRRandomUserPool;
 
 typedef void(^SRRandomUserCompletionBlock)(SRRandomUserPool *, BOOL success);
+typedef void(^SRRandomUserRetrievalBlock)(NSArray *, BOOL success);
 
 @interface SRRandomUserGenerator : NSObject
+
+/** Determines if user requests are saved to disk in the current request format, NO by default
+ */
+@property (nonatomic, readonly) BOOL shouldSaveResults;
+- (void)saveRandomRequestResults:(BOOL)saveResults;
+
+/** BOOL used to check if there are previously saved requests
+ */
+@property (nonatomic, readonly) BOOL previousRequestsExist;
 
 /** Returns an @p SRRandomUserPool singleton with JSON and LegoRequests = NO as defaults
  *  @return @p SRRandomUserPool singleton
@@ -35,5 +45,6 @@ typedef void(^SRRandomUserCompletionBlock)(SRRandomUserPool *, BOOL success);
 - (void)randomUsersRequest:(NSUInteger)quantity withGender:(SRRandomUserGender)gender completion:(SRRandomUserCompletionBlock)completion;
 - (void)randomUsersRequest:(NSUInteger)quantity withGender:(SRRandomUserGender)gender andNationality:(SRRandomUserNationality)nationality completion:(SRRandomUserCompletionBlock)completion;
 
+- (void)retrievePreviousRequests:(SRRandomUserRetrievalBlock)retrievalBlock;
 
 @end

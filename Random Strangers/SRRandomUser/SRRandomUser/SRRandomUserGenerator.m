@@ -11,6 +11,7 @@
 #import "SRRandomUser.h"
 #import "SRRandomUserPool.h"
 #import "SRRandomUserAPIManager.h"
+#import "SRRandomUserFileManager.h"
 
 @interface SRRandomUserGenerator()
 
@@ -25,6 +26,8 @@
 
 
 @implementation SRRandomUserGenerator
+
+#pragma mark - Initializers
 
 + (instancetype)sharedRandomUserManager{
     
@@ -41,9 +44,22 @@
     if (self) {
         _defaultResultsFormat = SRRandomUserResultsFormatJSON;
         _makeLegoRequests = NO;
+        _shouldSaveResults = NO;
     }
     return self;
 }
+
+-(void)saveRandomRequestResults:(BOOL)saveResults{
+    _shouldSaveResults = saveResults;
+}
+
+// TODO: Figure out if I really want to save a file...
+-(BOOL)previousRequestsExist{
+    SRRandomUserFileManager *fileManager = [SRRandomUserFileManager sharedFileManager];
+    return NO;
+}
+
+# pragma mark - Request Methods 
 
 - (void)randomUserRequestWithCompletion:(SRRandomUserCompletionBlock)completion{
     
@@ -91,6 +107,13 @@
         }
         
     }];
+    
+}
+
+#pragma mark - Retrieve Requests from Disk
+
+-(void)retrievePreviousRequests:(SRRandomUserRetrievalBlock)retrievalBlock{
+    
     
 }
 
