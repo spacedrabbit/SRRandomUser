@@ -28,7 +28,7 @@ static NSString * const SRAPIVersionKey = @"version";
 
 @implementation SRRandomUserPool
 
-+(instancetype)randomUserPoolForData:(NSDictionary *)userData{
++ (instancetype)randomUserPoolForData:(NSDictionary *)userData{
     
     NSMutableArray *userPool = [[NSMutableArray alloc] init];
     NSArray *allResults = userData[SRAllResultsKey];
@@ -69,7 +69,7 @@ static NSString * const SRAPIVersionKey = @"version";
     return pool;
 }
 
--(instancetype) initPool:(NSArray *)pool WithSeed:(NSString *)seed version:(NSString *)version{
+- (instancetype) initPool:(NSArray *)pool WithSeed:(NSString *)seed version:(NSString *)version{
     self = [super init];
     if (self) {
         _seed = seed;
@@ -79,6 +79,9 @@ static NSString * const SRAPIVersionKey = @"version";
     return self;
 }
 
+- (NSString *)seedForPool:(SRRandomUserPool *)pool{
+    return pool.seed;
+}
 
 
 @end

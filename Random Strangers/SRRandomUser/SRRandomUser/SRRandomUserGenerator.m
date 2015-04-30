@@ -26,6 +26,8 @@
 
 @implementation SRRandomUserGenerator
 
+#pragma mark - Initializers
+
 + (instancetype)sharedRandomUserManager{
     
     static SRRandomUserGenerator *_sharedManager;
@@ -44,6 +46,8 @@
     }
     return self;
 }
+
+#pragma mark - Request Methods
 
 - (void)randomUserRequestWithCompletion:(SRRandomUserCompletionBlock)completion{
     
@@ -92,6 +96,23 @@
         
     }];
     
+}
+
+// TODO: Refactor
+// TODO: Handle invalid Seed
+- (void)requestPreviousUserPoolWithSeed:(NSString *)seed completion:(SRRandomUserCompletionBlock)completion{
+    [[SRRandomUserAPIManager sharedAPIManager] requestRandomUsersFromSeed:seed completion:^(FSNConnection *connection) {
+        if (connection.httpResponse.statusCode == 200) {
+            NSDictionary *response = (NSDictionary *)connection.parseResult;
+            SRRandomUserPool *resultsPool = [SRRandomUserPool randomUserPoolForData:response];
+            
+            completion(resultsPool, YES);
+        }
+        else if (connection.httpResponse.statusCode > 400){
+            NSLog(@"Error in completing request: %@", connection.error);
+            completion(nil, NO);
+        }
+    }];
 }
 
 @end

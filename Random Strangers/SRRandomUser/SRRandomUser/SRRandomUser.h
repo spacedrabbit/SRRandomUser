@@ -22,8 +22,17 @@ extern NSString * const SRSSNKey;
 @interface SRRandomUser : NSObject
 
 // Basic details
+/** An @p SRRandomUser's first name
+ *  @sa -(NSString *)formattedName
+ */
 @property (strong, nonatomic, readonly) NSString *firstName;
+/** An @p SRRandomUser's last name 
+ *  @sa -(NSString *)formattedName
+ */
 @property (strong, nonatomic, readonly) NSString *lastName;
+/** An @p SRRandomUser's title, such as Mr. Mrs. and Ms. 
+ *  @sa -(NSString *)formattedName
+ */
 @property (strong, nonatomic, readonly) NSString *title;
 
 /** Returns @p SRRandomUser's formatted name
@@ -32,9 +41,21 @@ extern NSString * const SRSSNKey;
 - (NSString *)formattedName;
 
 // Address information
+/** An @p SRRandomUser's street address
+ *  @sa -(NSString *)formattedAddress
+ */
 @property (strong, nonatomic, readonly) NSString *streetAddress;
+/** An @p SRRandomUser's city
+ *  @sa -(NSString *)formattedAddress
+ */
 @property (strong, nonatomic, readonly) NSString *city;
+/** An @p SRRandomUser's state/county
+ *  @sa -(NSString *)formattedAddress
+ */
 @property (strong, nonatomic, readonly) NSString *state;
+/** An @p SRRandomUser's zip code
+ *  @sa -(NSString *)formattedAddress
+ */
 @property (strong, nonatomic, readonly) NSString *zipCode;
 
 /** Returns @p SRRandomUser's formatted address
@@ -43,23 +64,41 @@ extern NSString * const SRSSNKey;
 - (NSString *)formattedAddress;
 
 // Account details
+/** An @p SRRandomUser's username */
 @property (strong, nonatomic, readonly) NSString *username;
+/** An @p SRRandomUser's password */
 @property (strong, nonatomic, readonly) NSString *password;
+/** An @p SRRandomUser's gender */
 @property (strong, nonatomic, readonly) NSString *gender;
+/** An @p SRRandomUser's date of registration as a date determined from the number of seconds since 1970
+ *  @remarks May require additional formatting through use of @p NSDateFormatter depending on your needs
+ */
 @property (strong, nonatomic, readonly) NSDate *dateOfRegistration;
 
 // Contact details
+/** An @p SRRandomUser's email address */
 @property (strong, nonatomic, readonly) NSString *emailAddress;
+/** An @p SRRandomUser's phone number */
 @property (strong, nonatomic, readonly) NSString *phoneNumber;
+/** An @p SRRandomUser's cell phone number */
 @property (strong, nonatomic, readonly) NSString *cellNumber;
 
-// Image details
+// Image details - See all user photos: https://randomuser.me/photos
+/** An @p SRRandomUser's URL for a large profile image */
 @property (strong, nonatomic, readonly) NSURL *largeProfileImage;
+/** An @p SRRandomUser's URL for a medium profile image */
 @property (strong, nonatomic, readonly) NSURL *mediumProfileImage;
+/** An @p SRRandomUser's URL for a thumbnail profile image */
 @property (strong, nonatomic, readonly) NSURL *thumbnailProfileImage;
 
 // Extended details
+/** An @p SRRandomUser's nationality
+ *  @remarks Currently the API only supports GB and US
+ */
 @property (strong, nonatomic, readonly) NSString *nationality;
+/** An @p SRRandomUser's date of registration as a date determined from the number of seconds since 1970
+ *  @remarks May require additional formatting through use of @p NSDateFormatter depending on your needs
+ */
 @property (strong, nonatomic, readonly) NSDate *dateOfBirth;
 
 /** Creates a random user with the given attributes

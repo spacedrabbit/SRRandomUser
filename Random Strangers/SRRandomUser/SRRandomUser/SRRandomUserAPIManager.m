@@ -56,7 +56,8 @@ static NSString * const SRRandomUserAnyNationalityValue = @"";
 
 @implementation SRRandomUserAPIManager
 
-#pragma mark - Initializers and Lazy Loaders
+#pragma mark - Initializers and Setters
+
 + (instancetype)sharedAPIManager {
     static SRRandomUserAPIManager *_sharedManager = nil;
     static dispatch_once_t onceToken;
@@ -95,6 +96,7 @@ static NSString * const SRRandomUserAnyNationalityValue = @"";
 }
 
 #pragma mark - Request Methods
+
 - (void)requestRandomUser:(FSNCompletionBlock)completion{
     [self requestRandomUsers:1
                     ofGender:SRRandomUserGenderAny
@@ -131,6 +133,19 @@ static NSString * const SRRandomUserAnyNationalityValue = @"";
     [fsnConnection start];
     self.mostRecentConnection = fsnConnection;
     
+}
+
+// TODO: Refactor
+- (void)requestRandomUsersFromSeed:(NSString *)seed completion:(FSNCompletionBlock)completion{
+    FSNConnection * fsnConnection = [FSNConnection withUrl:URLIFY(SRRandomUserURL)
+                                                    method:FSNRequestMethodGET
+                                                   headers:@{}
+                                                parameters:@{ SRRandomUserSeedParameter : seed }
+                                                parseBlock:self.defaultParseBlock
+                                           completionBlock:completion
+                                             progressBlock:nil];
+    [fsnConnection start];
+    self.mostRecentConnection = fsnConnection;
 }
 
 #pragma mark - Private Convinience Methods

@@ -17,4 +17,10 @@
  */
 +(instancetype)randomUserPoolForData:(NSDictionary *)userData;
 
+/** Used to retrieve the seed generated from a particular pool of users. This seed can be used to make future requests and to ensure that the same pool of random users is returned
+ *  @param pool The @p SRRandomUserPool you wish to request again
+ *  @return @p NSString the value of the seed
+ *  @sa 
+ */
+- (NSString *)seedForPool:(SRRandomUserPool *)pool;
 @end
