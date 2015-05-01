@@ -10,8 +10,8 @@ end
 
 target 'SRRandomUserTests' do
 
-pod 'Specta'
-pod 'Expecta'
+pod 'Specta', '~> 0.5'
+pod 'Expecta', '~> 0.4.2'
 pod 'Expecta+OCMock', '~> 2.0'
 pod 'OCMock', '~> 3.1'
 
