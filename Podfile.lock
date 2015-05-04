@@ -8,11 +8,11 @@ PODS:
   - Specta (0.5.0)
 
 DEPENDENCIES:
-  - Expecta
+  - Expecta (~> 0.4.2)
   - Expecta+OCMock (~> 2.0)
   - FSNetworking
   - OCMock (~> 3.1)
-  - Specta
+  - Specta (~> 0.5)
 
 SPEC CHECKSUMS:
   Expecta: 78b4e8b0c8291fa4524d7f74016b6065c2e391ec
